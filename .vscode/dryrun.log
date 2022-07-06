@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_swap'
+make: Leaving directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_swap'
+ 
+make: *** No targets.  Stop.
+
