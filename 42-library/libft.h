@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 16:40:40 by cmorales          #+#    #+#             */
-/*   Updated: 2022/06/30 18:33:14 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/06 18:14:47 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/*Get_Next_line*/
+
+char	*get_next_line(int fd);
+
+/* Prinf*/
+
+int		ft_printf(const char *str, ...);
 
 #endif

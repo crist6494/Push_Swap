@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 11:32:01 by cmorales          #+#    #+#             */
-/*   Updated: 2022/06/29 19:09:36 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/06 21:01:23 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_printf(char const *str, ...)
 	va_end (alist);
 	return (tc);
 }
-
+/* 
    int   main()
 {
 	void *a;
@@ -95,4 +95,4 @@ Muestra un número hexadecimal en mayúscula = %X\n \
 Muestra un puntero *void imprimido en hezadecimal = %p\n" \
 
 ,'c', "El mamporrero",  -16, 9, -45, 42, 42, a); \
-}   
+}    */
