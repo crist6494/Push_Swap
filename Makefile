@@ -5,10 +5,12 @@ CC	= gcc
 CFLAGS	=	-Wall -Wextra -Werror
 
 SRC_DIR	=	./src/
+
 SRCS	=	push_swap.c	\
 			main_push_swap.c			
 
 OBJ_DIR	=	./obj/
+
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 all: lib obj $(NAME)

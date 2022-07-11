@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Jul  6 21:00:32 2022
+# Make data base, printed on Mon Jul 11 17:31:18 2022
 
 # Variables
 
@@ -16,8 +16,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -29,23 +27,19 @@ CURDIR := /System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_swap
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"eae11d900af9c06c6da7ac60cedf8cf9.es","_translationsConfigFile":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/tcf.json","_cacheRoot":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es","_resolvedLanguagePackCoreLocation":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"eae11d900af9c06c6da7ac60cedf8cf9.es","_translationsConfigFile":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/tcf.json","_cacheRoot":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es","_resolvedLanguagePackCoreLocation":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9","_corruptedFile":"/Users/cmorales/Library/Application Support/Code/clp/eae11d900af9c06c6da7ac60cedf8cf9.es/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 5)
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 11)
-OBJ_DIR = ./obj/
-# environment
-VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 12)
+OBJ_DIR = ./obj/
+# makefile (from `Makefile', line 14)
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 # environment
 P9K_SSH = 0
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cb100032r8/T/vscode-ipc-8c635876-8d85-4461-84f8-88f6b4c43d75.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -53,17 +47,13 @@ PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/cmor
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-VSCODE_LOG_STACK = false
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0X0EcgFNbZ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.l6amDr12Xa/Listeners
 # automatic
 %F = $(notdir $%)
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_swap
 # environment
@@ -75,7 +65,7 @@ HOME = /Users/cmorales
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cmorales/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /Users/cmorales/Library/Application Support/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
 # environment
 LOGNAME = cmorales
 # environment
@@ -92,7 +82,7 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# makefile (from `Makefile', line 8)
+# makefile (from `Makefile', line 9)
 SRCS = push_swap.c main_push_swap.c			
 # environment
 SHLVL = 1
@@ -119,7 +109,9 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cb100032r8/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cmorales/Library/Application Support/Code/1.68.1-main.sock
+VSCODE_IPC_HOOK = /Users/cmorales/Library/Application Support/Code/1.69.0-main.sock
+# environment
+MallocNanoZone = 0
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -129,7 +121,7 @@ MFLAGS = -Rrqp
 # environment
 MAIL = cmorales@student.42malaga.com
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1912
+XPC_SERVICE_NAME = com.microsoft.VSCode.2004
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -157,9 +149,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 60950
+VSCODE_PID = 34993
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=3/106=3%
+# Load=69/1024=7%, Rehash=0, Collisions=3/102=3%
 
 # Pattern-specific Variable Values
 
@@ -175,7 +167,7 @@ VSCODE_PID = 60950
 # Implicit Rules
 
 obj/%.o: ./src/%.c
-#  commands to execute (from `Makefile', line 20):
+#  commands to execute (from `Makefile', line 22):
 	$(CC) $(CFLAGS) -I ./includes/ -I ./42-library/ -o $@ -c $<
 	
 
@@ -213,18 +205,26 @@ obj/push_swap.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 21:00:21
+#  Last modified 2022-07-07 18:39:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+prueba:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 41):
+	./push_swap 8 6 7 65 5 4 
+	
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 33):
+#  commands to execute (from `Makefile', line 35):
 	make fclean -C ./42-library
 	rm -rf obj $(NAME)
 	
@@ -253,7 +253,7 @@ lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/10=10%
-#  commands to execute (from `Makefile', line 23):
+#  commands to execute (from `Makefile', line 25):
 	make -C	./42-library
 	
 
@@ -261,7 +261,7 @@ obj:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 17):
+#  commands to execute (from `Makefile', line 19):
 	mkdir obj
 	
 
@@ -282,7 +282,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 29):
+#  commands to execute (from `Makefile', line 31):
 	make clean -C ./42-library
 	rm -rf obj $(OBJS)
 	
@@ -291,7 +291,7 @@ push_swap: obj/push_swap.o obj/main_push_swap.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 26):
+#  commands to execute (from `Makefile', line 28):
 	$(CC) $(CFLAGS) $(OBJS) -L ./42-library -l ft -o $(NAME)
 	
 
@@ -302,7 +302,7 @@ obj/main_push_swap.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/39=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/40=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -314,6 +314,6 @@ obj/main_push_swap.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jul  6 21:00:32 2022
+# Finished Make data base on Mon Jul 11 17:31:18 2022
 
  

@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/06 21:00:38 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/11 19:10:00 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,11 @@
 
 int	push_swap(int total_arg, char**num);
 int	main(int argc, char **argv);
+
+typedef	struct list_a
+{
+	int	value;
+	struct	list_a *next;
+}List_a;
 
 #endif
