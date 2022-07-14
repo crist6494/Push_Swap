@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 14:48:57 by cmorales          #+#    #+#             */
-/*   Updated: 2022/06/17 19:08:55 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:04:10 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int	ft_atoi(const char *str)
 	num *= neg;
 	return (num);
 }
-#include <stdio.h>
+/* #include <stdio.h>
 #include <stdlib.h>
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
 		printf("%d\n", ft_atoi(argv[1]));
 	return (0);
-}
+} */

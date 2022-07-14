@@ -7,7 +7,8 @@ CFLAGS	=	-Wall -Wextra -Werror
 SRC_DIR	=	./src/
 
 SRCS	=	push_swap.c	\
-			main_push_swap.c			
+			main_push_swap.c \
+			stack_init.c			
 
 OBJ_DIR	=	./obj/
 
