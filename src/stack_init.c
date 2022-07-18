@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:49:24 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/14 18:53:47 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/18 17:11:53 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	add_bottom(List_a **a, List_a *new)//new es el tmp
 	else
 	{
 		tmp = *a;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;//Añadimos el numero al final
+		while (tmp->nxt)
+			tmp = tmp->nxt;
+		tmp->nxt = new;//Añadimos el numero al final
 		new->prv = tmp; //Asi sabes que va a ser el previo
 	}
 }
@@ -36,7 +36,7 @@ void	init_stack(List_a **a, int number)
 	if (!tmp)
 		return ;
 	tmp->value = number;//Crear valor sin anterior ni posterior para poner al final
-	tmp->next = NULL;
+	tmp->nxt = NULL;
 	tmp->prv = NULL;
 	add_bottom(a, tmp);
 	tmp = NULL; //vaciamos la lista

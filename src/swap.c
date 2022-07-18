@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_s.c                                           :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:18:25 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/14 19:25:36 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/18 17:41:39 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	swap_s(List_a **top)
-{
-	int	i;
-	int	j;
-	List_a	*tmp;
+/*This is for the operations sa,sb,ss*/
 
-	tmp = NULL;
-	if ((*top) && (*top)->next)
+void	swap(List_a **top)
+{
+	int	aux;
+
+	if ((*top) && (*top)->nxt)
 	{
-		tmp = *top;
-		i = (*top)->value;
-		j = (*top)->next->value;
-		(*top)->value = j;
-		(*top)->next->value = i;
+		aux = (*top)->value;
+		(*top)->value = (*top)->nxt->value;
+		(*top)->nxt->value = aux;
 	}
+}
+
+void	swap_both(List_a **a, List_a **b)
+{
+	swap(a);
+	swap(b);
 }
