@@ -6,18 +6,18 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:54:02 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/18 18:30:37 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/19 17:23:06 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 
-void	push_a(List_a **a, List_a **b)
+void	pa(t_node **a, t_node **b)
 /* take element from top of stack b and put it on top stack a
-** do nothing if stack b is empty */
+ do nothing if stack b is empty */
 {
-	List_a	*temp;
+	t_node	*temp;
 
 	if (*b)
 	{
@@ -28,11 +28,11 @@ void	push_a(List_a **a, List_a **b)
 	}
 }
 
-void	push_b(List_a **a, List_a **b)
+void	pb(t_node **a, t_node **b)
 /* take element from top of stack a and put it on top stack b
-** do nothing if stack a is empty */
+do nothing if stack a is empty */
 {
-	List_a	*temp;
+	t_node	*temp;
 
 	if (*a)
 	{

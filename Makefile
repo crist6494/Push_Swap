@@ -9,7 +9,8 @@ SRC_DIR	=	./src/
 SRCS	=	main_push_swap.c \
 			stack_init.c \
 			swap.c \
-			push.c			
+			push.c \
+			checker_errors.c		
 
 OBJ_DIR	=	./obj/
 

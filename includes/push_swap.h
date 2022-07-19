@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/18 18:16:32 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/19 20:40:24 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,26 @@
 # include "../42-library/libft.h"
 # include <stddef.h>
 
-typedef	struct list_a
+typedef	struct t_node
 {
 	int	value;
-	struct	list_a *prv;
-	struct	list_a *nxt;
-}List_a;
+	struct	t_node *prv;
+	struct	t_node *nxt;
+}t_node;
 
-int	push_swap(int total_arg, char**num);
-int	main(int argc, char **argv);
-void	add_bottom(List_a **a, List_a *new);
-void	init_stack(List_a **a, int number);
-void	swap(List_a **top);
-void	swap_both(List_a **a, List_a **b);
-void	push_a(List_a **src, List_a **obj);
-void	push_b(List_a **a, List_a **b);
+int		push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b);
+int		main(int argc, char **argv);
+void	add_bottom(t_node **list_a, t_node *new);
+void	init_stack(t_node **list_a, int number);
+void	sa(t_node **top);
+void	sb(t_node **top);
+void	ss(t_node **a, t_node **b);
+void	pa(t_node **src, t_node **obj);
+void	pb(t_node **a, t_node **b);
+int		checknumber(char *num);
+int		checkduplicate(char **num);
+int		checkmaxnumber(char *num);
+int		check_all(char **num, int i, int total_arg);
+void	printlist(t_node *list_a, t_node *list_b);
 
 #endif

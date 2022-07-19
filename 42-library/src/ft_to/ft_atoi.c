@@ -6,13 +6,13 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 14:48:57 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/14 18:04:10 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/19 20:15:24 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	size_t	pos;
 	size_t	neg;

@@ -6,43 +6,81 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/18 19:34:43 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/19 20:43:44 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	push_swap(int total_arg, char **num)
+int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
 {
-	List_a	*a;
-	List_a	*b;
 	int		i;
-
-	a = NULL;
-	b = NULL;
-	i = 1;
+	
+ 	i = 1;
+	if (!check_all(num, i, total_arg))
+		return(0);
 	while (i < total_arg)
 	{
-		init_stack(&a, ft_atoi(num[i]));
+		init_stack(list_a, ft_atoi(num[i]));
 		i++;
 	}
-	swap(&a);
-	while (a)
+		 
+	while (*list_a)
 	{
-		printf("%d\n", a->value);
-		a = a->nxt;
+		printf("%d\n", (*list_a)->value);
+		*list_a = (*list_a)->nxt;
 	}
-	while (b)
+	while (*list_b)
 	{
-		printf("Este es la lista b: %d\n", b->value);
-		b = b->nxt;
+		printf("Este es la lista b: %d\n", (*list_b)->value);
+		*list_b = (*list_b)->nxt;
 	}
-	
+	printlist(*list_a, *list_b);
+
 	return (0);
+}
+
+void	printlist(t_node *list_a, t_node *list_b)
+{
+	int	a;
+	int	b;
+
+	while (list_a || list_b)
+	{
+		if (list_a)
+		{
+			if (list_a)
+			a = list_a->value;
+				list_a = list_a->nxt;
+		}
+		else
+			a = 0;
+		if (list_b)
+		{
+			if (list_b)
+				b = list_b->value;
+			list_a = list_b->nxt;
+		}
+		else
+			b = 0;
+		printf(" %d        %d \n", a, b);
+    }
+    printf("---------\n A     B \n\n");
 }
 
 int	main(int argc, char **argv)
 {
-	push_swap(argc, argv);	
+	t_node	*list_a;
+	t_node	*list_b;
+	
+	list_a = malloc(sizeof(t_node));
+	list_b = malloc(sizeof(t_node));
+	if (!list_a)
+		return (0);
+	if (!list_b)
+		return (0);	
+	list_a = NULL;
+	list_b = NULL;
+	push_swap(argc, argv,&list_a, &list_b);	
 	return (0);
 }
