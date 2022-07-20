@@ -6,39 +6,11 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/19 20:43:44 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:08:15 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
-{
-	int		i;
-	
- 	i = 1;
-	if (!check_all(num, i, total_arg))
-		return(0);
-	while (i < total_arg)
-	{
-		init_stack(list_a, ft_atoi(num[i]));
-		i++;
-	}
-		 
-	while (*list_a)
-	{
-		printf("%d\n", (*list_a)->value);
-		*list_a = (*list_a)->nxt;
-	}
-	while (*list_b)
-	{
-		printf("Este es la lista b: %d\n", (*list_b)->value);
-		*list_b = (*list_b)->nxt;
-	}
-	printlist(*list_a, *list_b);
-
-	return (0);
-}
 
 void	printlist(t_node *list_a, t_node *list_b)
 {
@@ -50,8 +22,8 @@ void	printlist(t_node *list_a, t_node *list_b)
 		if (list_a)
 		{
 			if (list_a)
-			a = list_a->value;
-				list_a = list_a->nxt;
+				a = list_a->value;
+			list_a = list_a->nxt;
 		}
 		else
 			a = 0;
@@ -59,13 +31,31 @@ void	printlist(t_node *list_a, t_node *list_b)
 		{
 			if (list_b)
 				b = list_b->value;
-			list_a = list_b->nxt;
+			list_b = list_b->nxt;
 		}
 		else
 			b = 0;
-		printf(" %d        %d \n", a, b);
+		printf(" %d     %d \n", a, b);
     }
     printf("---------\n A     B \n\n");
+}
+
+int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
+{
+	int		i;
+	
+ 	i = 1;
+	if (!check_errors(num, i, total_arg))
+		return(0);
+	while (i < total_arg)
+	{
+		init_stack(list_a, ft_atoi(num[i]));
+		i++;
+	} 
+	sa(list_a);
+	printlist(*list_a, *list_b);
+
+	return (0);
 }
 
 int	main(int argc, char **argv)

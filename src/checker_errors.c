@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:45:48 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/19 20:31:06 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:02:30 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ int	checknumber(char *num)
 	}
 	if ((num[i] == '+' || num[i] == '-') && (num + 1) != NULL)
 		i++;
-	if(!ft_isdigit(num[i]))
+	while (num[i])
 	{
-		ft_printf("ERROR IS NOT A INTEGER");
-		return(0);
+		if(!ft_isdigit(num[i]))
+		{
+			ft_printf("ERROR IS NOT A INTEGER");
+			return(0);
+		}
+		i++;
 	}
 	return (1);
 }
@@ -72,7 +76,7 @@ int	checkmaxnumber(char *num)
 	return (1);
 }
 
-int	check_all(char **num, int i, int total_arg)
+int	check_errors(char **num, int i, int total_arg)
 {
 	i = 1;
 	while (i < total_arg)
