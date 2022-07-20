@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 17:08:15 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:33:25 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,11 @@ int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
 		init_stack(list_a, ft_atoi(num[i]));
 		i++;
 	} 
-	sa(list_a);
+	pb(list_a,list_b);
+	pb(list_a,list_b);
+	pb(list_a,list_b);
+	//rr(list_a, list_b); 
+	//rra(list_a);
 	printlist(*list_a, *list_b);
 
 	return (0);

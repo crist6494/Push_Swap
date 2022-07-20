@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 17:03:11 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:02:19 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ void	sb(t_node **top);
 void	ss(t_node **a, t_node **b);
 void	pa(t_node **src, t_node **obj);
 void	pb(t_node **a, t_node **b);
-
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	rra(t_node **a);
 #endif

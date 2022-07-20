@@ -1,49 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 17:04:59 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 19:43:49 by cmorales         ###   ########.fr       */
+/*   Created: 2022/07/20 18:38:12 by cmorales          #+#    #+#             */
+/*   Updated: 2022/07/20 20:18:04 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ra(t_node **a)
+void	rra(t_node **a)
 {
 	t_node	*tmp;
-	int	val;
-
-	val = (*a)->value;
+	t_node	*val;
+	
 	tmp = (*a);
-	while(tmp->nxt)
+	while (tmp->nxt->nxt != NULL)
 		tmp = tmp->nxt;
-	tmp->nxt = malloc(sizeof(t_node));
-	tmp->nxt->value = val;
-	 (*a) = (*a)->nxt;
-	(*a)->prv = NULL; 
+	val = tmp->nxt;
+	val->nxt = (*a);
+	(*a) = val;
+	tmp->nxt = NULL;
 }
 
-void	rb(t_node **b)
+void	rrb(t_node **b)
 {
 	t_node	*tmp;
-	int	val;
-
-	val = (*b)->value;
+	t_node	*val;
+	
 	tmp = (*b);
-	while(tmp->nxt)
+	while (tmp->nxt->nxt != NULL)
 		tmp = tmp->nxt;
-	tmp->nxt = malloc(sizeof(t_node));
-	tmp->nxt->value = val;
-	(*b) = (*b)->nxt;
-	(*b)->prv = NULL;
+	val = tmp->nxt;
+	val->nxt = (*b);
+	(*b) = val;
+	tmp->nxt = NULL;
 }
 
-void	rr(t_node **a, t_node **b)
+void	rrr(t_node **a, t_node **b)
 {
-	ra(a);
-	rb(b);
+	rra(a);
+	rrb(b);
 }

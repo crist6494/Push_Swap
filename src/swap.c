@@ -6,13 +6,13 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:18:25 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/19 19:36:18 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:42:35 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/*This is for the operations sa,sb,ss*/
+/*This is for the operations sa,sb,sss*/
 
 void	sa(t_node **top)
 {
