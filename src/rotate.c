@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:04:59 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 19:43:49 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:45:40 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,26 @@
 void	ra(t_node **a)
 {
 	t_node	*tmp;
-	int	val;
+	int		val;
 
 	val = (*a)->value;
 	tmp = (*a);
-	while(tmp->nxt)
+	while (tmp->nxt)
 		tmp = tmp->nxt;
 	tmp->nxt = malloc(sizeof(t_node));
 	tmp->nxt->value = val;
-	 (*a) = (*a)->nxt;
-	(*a)->prv = NULL; 
+	(*a) = (*a)->nxt;
+	(*a)->prv = NULL;
 }
 
 void	rb(t_node **b)
 {
 	t_node	*tmp;
-	int	val;
+	int		val;
 
 	val = (*b)->value;
 	tmp = (*b);
-	while(tmp->nxt)
+	while (tmp->nxt)
 		tmp = tmp->nxt;
 	tmp->nxt = malloc(sizeof(t_node));
 	tmp->nxt->value = val;

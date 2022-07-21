@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 20:33:25 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 18:56:00 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,27 +36,28 @@ void	printlist(t_node *list_a, t_node *list_b)
 		else
 			b = 0;
 		printf(" %d     %d \n", a, b);
-    }
-    printf("---------\n A     B \n\n");
+	}
+	printf("---------\n A	B \n\n");
 }
 
 int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
 {
 	int		i;
-	
- 	i = 1;
+
+	i = 1;
 	if (!check_errors(num, i, total_arg))
-		return(0);
+		return (0);
 	while (i < total_arg)
 	{
 		init_stack(list_a, ft_atoi(num[i]));
 		i++;
-	} 
+	}
+	/* pb(list_a,list_b);
 	pb(list_a,list_b);
 	pb(list_a,list_b);
-	pb(list_a,list_b);
-	//rr(list_a, list_b); 
-	//rra(list_a);
+	rr(list_a, list_b); 
+	rra(list_a); */
+	sort_3(list_a);
 	printlist(*list_a, *list_b);
 
 	return (0);
@@ -66,15 +67,15 @@ int	main(int argc, char **argv)
 {
 	t_node	*list_a;
 	t_node	*list_b;
-	
+
 	list_a = malloc(sizeof(t_node));
 	list_b = malloc(sizeof(t_node));
 	if (!list_a)
 		return (0);
 	if (!list_b)
-		return (0);	
+		return (0);
 	list_a = NULL;
 	list_b = NULL;
-	push_swap(argc, argv,&list_a, &list_b);	
+	push_swap (argc, argv, &list_a, &list_b);
 	return (0);
 }

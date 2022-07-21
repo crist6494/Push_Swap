@@ -12,7 +12,8 @@ SRCS	=	main_push_swap.c \
 			push.c \
 			checker_errors.c \
 			rotate.c \
-			reverse_rotate.c
+			reverse_rotate.c \
+			simplify_list.c
 
 OBJ_DIR	=	./obj/
 

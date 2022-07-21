@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:38:12 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 20:18:04 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:57:38 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rra(t_node **a)
 {
 	t_node	*tmp;
 	t_node	*val;
-	
+
 	tmp = (*a);
 	while (tmp->nxt->nxt != NULL)
 		tmp = tmp->nxt;
@@ -30,7 +30,7 @@ void	rrb(t_node **b)
 {
 	t_node	*tmp;
 	t_node	*val;
-	
+
 	tmp = (*b);
 	while (tmp->nxt->nxt != NULL)
 		tmp = tmp->nxt;

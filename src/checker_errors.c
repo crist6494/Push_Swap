@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:45:48 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 17:02:30 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:35:09 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	checknumber(char *num)
 		i++;
 	while (num[i])
 	{
-		if(!ft_isdigit(num[i]))
+		if (!ft_isdigit(num[i]))
 		{
 			ft_printf("ERROR IS NOT A INTEGER");
-			return(0);
+			return (0);
 		}
 		i++;
 	}
@@ -42,21 +42,21 @@ int	checkduplicate(char **num)
 	int	j;
 
 	i = 0;
-	while(num[i])
+	while (num[i])
 	{
 		j = i + 1;
-		while(num[j])
+		while (num[j])
 		{
-			if(ft_atoi(num[i]) == ft_atoi(num[j]))
+			if (ft_atoi(num[i]) == ft_atoi(num[j]))
 			{
 				ft_printf("ERROR A NUMBER IS DUPLICATE");
-				return(0);
+				return (0);
 			}
 			j++;
 		}
 		i++;
 	}
-	return(1);
+	return (1);
 }
 
 int	checkmaxnumber(char *num)
@@ -69,7 +69,7 @@ int	checkmaxnumber(char *num)
 		if (ft_atoi(num) > 2147483647 || ft_atoi(num) < -2147483648)
 		{
 			ft_printf("ERROR THE MAX VALUE HAS BEEN EXCEEDED");
-				return(0);
+			return (0);
 		}
 		i++;
 	}	
@@ -82,23 +82,22 @@ int	check_errors(char **num, int i, int total_arg)
 	while (i < total_arg)
 	{
 		if (!checknumber(num[i]))
-			return(0);
+			return (0);
 		i++;
 	}
- 	i = 1;
+	i = 1;
 	while (i < total_arg)
 	{
 		if (!checkduplicate(num))
-			return(0);
+			return (0);
 		i++;
-	}	
- 
- 	i = 1;
+	}
+	i = 1;
 	while (i < total_arg)
 	{
 		if (!checkmaxnumber(num[i]))
-			return(0);
+			return (0);
 		i++;
 	}
-	return(1);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 19:02:19 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 18:54:18 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include "../42-library/libft.h"
 # include <stddef.h>
 
-typedef	struct t_node
+typedef struct t_node
 {
-	int	value;
-	struct	t_node *prv;
-	struct	t_node *nxt;
+	int				value;
+	struct t_node	*prv;
+	struct t_node	*nxt;
 }t_node;
 
 int		push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b);
@@ -41,4 +41,7 @@ void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
 void	rra(t_node **a);
+void	sort_2(t_node **a);
+void	sort_3(t_node **list_a);
+
 #endif

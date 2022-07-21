@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:18:25 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/20 20:42:35 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:48:03 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	sa(t_node **top)
 
 	if (!top)
 		return ;
-
 	if ((*top) && (*top)->nxt)
 	{
 		aux = (*top)->value;
@@ -32,7 +31,7 @@ void	sa(t_node **top)
 void	sb(t_node **top)
 {
 	int	aux;
-	
+
 	if (!top)
 		return ;
 	if ((*top) && (*top)->nxt)

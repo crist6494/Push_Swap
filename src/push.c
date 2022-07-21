@@ -6,12 +6,11 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:54:02 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/19 17:23:06 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:41:24 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
 
 void	pa(t_node **a, t_node **b)
 /* take element from top of stack b and put it on top stack a
@@ -42,6 +41,3 @@ do nothing if stack a is empty */
 		*a = temp;
 	}
 }
-
-
-
