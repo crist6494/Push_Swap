@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/21 18:54:18 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/25 20:20:14 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
 void	rra(t_node **a);
-void	sort_2(t_node **a);
-void	sort_3(t_node **list_a);
-
+void	order_2(t_node **a);
+void	order_3(t_node **list_a);
+void	order_4(t_node **list_a, t_node**list_b);
 #endif

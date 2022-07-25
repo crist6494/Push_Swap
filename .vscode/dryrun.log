@@ -2,12 +2,16 @@ make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_Swap'
 make -C	./42-library
  
-mkdir obj
+mkdir -p ./obj/
+mkdir -p ./obj//operations
 gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/main_push_swap.o -c src/main_push_swap.c
 gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/stack_init.o -c src/stack_init.c
-gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/swap.o -c src/swap.c
-gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/push.o -c src/push.c
 gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/checker_errors.o -c src/checker_errors.c
-gcc -Wall -Wextra -Werror ./obj/main_push_swap.o ./obj/stack_init.o ./obj/swap.o ./obj/push.o ./obj/checker_errors.o -L ./42-library -l ft -o push_swap
+gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/operations/swap.o -c src/operations/swap.c
+gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/operations/push.o -c src/operations/push.c
+gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/operations/rotate.o -c src/operations/rotate.c
+gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/operations/reverse_rotate.o -c src/operations/reverse_rotate.c
+gcc -Wall -Wextra -Werror -I ./includes/ -I ./42-library/ -o obj/order_list.o -c src/order_list.c
+gcc -Wall -Wextra -Werror ./obj/main_push_swap.o ./obj/stack_init.o ./obj/checker_errors.o ./obj/operations/swap.o ./obj/operations/push.o ./obj/operations/rotate.o ./obj/operations/reverse_rotate.o ./obj/order_list.o -L ./42-library -l ft -o push_swap
 make: Leaving directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/cmorales/Push_Swap'
  

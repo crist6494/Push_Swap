@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Jul 20 16:40:59 2022
+# Make data base, printed on Mon Jul 25 19:04:24 2022
 
 # Variables
 
@@ -34,9 +34,9 @@ _ = /usr/bin/make
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 15)
+# makefile (from `Makefile', line 18)
 OBJ_DIR = ./obj/
-# makefile (from `Makefile', line 17)
+# makefile (from `Makefile', line 20)
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 # environment
 P9K_SSH = 0
@@ -51,7 +51,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.8A4KGSqFGF/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ZSZnaj7C28/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -69,7 +69,7 @@ VSCODE_CODE_CACHE_PATH = /Users/cmorales/Library/Application Support/Code/Cached
 # environment
 LOGNAME = cmorales
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/cmorales/.oh-my-zsh
 # environment
@@ -83,7 +83,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 9)
-SRCS = main_push_swap.c stack_init.c swap.c push.c checker_errors.c		
+SRCS = main_push_swap.c stack_init.c checker_errors.c operations/swap.c operations/push.c operations/rotate.c operations/reverse_rotate.c order_list.c
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 3)
@@ -121,7 +121,7 @@ MFLAGS = -Rrqp
 # environment
 MAIL = cmorales@student.42malaga.com
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2360
+XPC_SERVICE_NAME = com.microsoft.VSCode.2200
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -149,7 +149,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9172
+VSCODE_PID = 28505
 # variable set hash-table stats:
 # Load=69/1024=7%, Rehash=0, Collisions=3/102=3%
 
@@ -159,15 +159,15 @@ VSCODE_PID = 9172
 
 # Directories
 
-# . (device 436207694, inode 39846137): 12 files, no impossibilities.
-# ./src (device 436207694, inode 39846324): No files, no impossibilities so far.
+# . (device 436207619, inode 39976969): 13 files, no impossibilities.
+# ./src (device 436207619, inode 40051623): No files, no impossibilities so far.
 
-# 12 files, no impossibilities in 2 directories.
+# 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 obj/%.o: ./src/%.c
-#  commands to execute (from `Makefile', line 25):
+#  commands to execute (from `Makefile', line 29):
 	$(CC) $(CFLAGS) -I ./includes/ -I ./42-library/ -o $@ -c $<
 	
 
@@ -191,6 +191,18 @@ all: lib obj push_swap
 #  File has not been updated.
 
 # Not a target:
+obj/operations/swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/operations/reverse_rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -199,7 +211,7 @@ all: lib obj push_swap
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 18:11:08
+#  Last modified 2022-07-25 19:03:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -209,16 +221,28 @@ prueba:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 48):
 	./push_swap 8 6 7 65 5 4 
 	
+
+# Not a target:
+obj/operations/push.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/operations/rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 38):
+#  commands to execute (from `Makefile', line 42):
 	make fclean -C ./42-library
 	rm -rf obj $(NAME)
 	
@@ -247,7 +271,7 @@ lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/10=10%
-#  commands to execute (from `Makefile', line 28):
+#  commands to execute (from `Makefile', line 32):
 	make -C	./42-library
 	
 
@@ -255,8 +279,9 @@ obj:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 22):
-	mkdir obj
+#  commands to execute (from `Makefile', line 25):
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)/operations
 	
 
 # Not a target:
@@ -267,12 +292,6 @@ obj/checker_errors.o:
 
 # Not a target:
 .DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/swap.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -288,27 +307,28 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 34):
+#  commands to execute (from `Makefile', line 38):
 	make clean -C ./42-library
 	rm -rf obj $(OBJS)
 	
 
-push_swap: obj/main_push_swap.o obj/stack_init.o obj/swap.o obj/push.o obj/checker_errors.o
+push_swap: obj/main_push_swap.o obj/stack_init.o obj/checker_errors.o obj/operations/swap.o obj/operations/push.o obj/operations/rotate.o obj/operations/reverse_rotate.o obj/order_list.o
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 31):
+#  commands to execute (from `Makefile', line 35):
 	$(CC) $(CFLAGS) $(OBJS) -L ./42-library -l ft -o $(NAME)
 	
 
 # Not a target:
-obj/push.o:
+obj/stack_init.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-obj/stack_init.o:
+obj/order_list.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -320,8 +340,7 @@ obj/main_push_swap.o:
 #  File has not been updated.
 
 # files hash-table stats:
- 
-# Load=17/1024=2%, Rehash=0, Collisions=0/46=0%
+# Load=20/1024=2%, Rehash=0, Collisions=0/52=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -333,6 +352,6 @@ obj/main_push_swap.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jul 20 16:40:59 2022
+# Finished Make data base on Mon Jul 25 19:04:24 2022
 
  

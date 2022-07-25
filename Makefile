@@ -8,12 +8,12 @@ SRC_DIR	=	./src/
 
 SRCS	=	main_push_swap.c \
 			stack_init.c \
-			swap.c \
-			push.c \
 			checker_errors.c \
-			rotate.c \
-			reverse_rotate.c \
-			simplify_list.c
+			operations/swap.c \
+			operations/push.c \
+			operations/rotate.c \
+			operations/reverse_rotate.c \
+			order_list.c
 
 OBJ_DIR	=	./obj/
 
@@ -22,7 +22,8 @@ OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 all: lib obj $(NAME)
 
 obj:
-	mkdir obj
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)/operations
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	$(CC) $(CFLAGS) -I ./includes/ -I ./42-library/ -o $@ -c $<
