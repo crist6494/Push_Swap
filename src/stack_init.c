@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:49:24 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/21 17:27:34 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:24:10 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ void	init_stack(t_node **list_a, int number)
 	tmp = malloc(sizeof(t_node));
 	if (!tmp)
 		return ;
+	tmp->fixed = -1;
 	tmp->value = number;
 	tmp->nxt = NULL;
 	tmp->prv = NULL;
 	add_bottom(list_a, tmp);
 	tmp = NULL;
 }
+

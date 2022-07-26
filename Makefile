@@ -13,7 +13,8 @@ SRCS	=	main_push_swap.c \
 			operations/push.c \
 			operations/rotate.c \
 			operations/reverse_rotate.c \
-			order_list.c
+			order_list.c \
+			utils.c
 
 OBJ_DIR	=	./obj/
 

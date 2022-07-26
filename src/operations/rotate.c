@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:04:59 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/21 17:45:40 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:28:06 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ra(t_node **a)
 	tmp->nxt->value = val;
 	(*a) = (*a)->nxt;
 	(*a)->prv = NULL;
+	ft_printf("RA\n");
 }
 
 void	rb(t_node **b)
@@ -40,10 +41,12 @@ void	rb(t_node **b)
 	tmp->nxt->value = val;
 	(*b) = (*b)->nxt;
 	(*b)->prv = NULL;
+	ft_printf("RB\n");
 }
 
 void	rr(t_node **a, t_node **b)
 {
 	ra(a);
 	rb(b);
+	ft_printf("RR\n");
 }

@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:54:02 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/21 17:41:24 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:27:23 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	pa(t_node **a, t_node **b)
 		*a = *b;
 		*b = temp;
 	}
+	ft_printf("PA\n");
 }
 
 void	pb(t_node **a, t_node **b)
@@ -40,4 +41,5 @@ do nothing if stack a is empty */
 		*b = *a;
 		*a = temp;
 	}
+	ft_printf("PB\n");
 }

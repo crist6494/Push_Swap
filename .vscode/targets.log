@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Mon Jul 25 19:04:24 2022
+# Make data base, printed on Tue Jul 26 19:09:05 2022
 
 # Variables
 
@@ -34,16 +34,16 @@ _ = /usr/bin/make
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 18)
+# makefile (from `Makefile', line 19)
 OBJ_DIR = ./obj/
-# makefile (from `Makefile', line 20)
+# makefile (from `Makefile', line 21)
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 # environment
 P9K_SSH = 0
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/cmorales/.fzf/bin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/cmorales/.fzf/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -51,7 +51,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ZSZnaj7C28/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.C95DUCjoTa/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -69,7 +69,7 @@ VSCODE_CODE_CACHE_PATH = /Users/cmorales/Library/Application Support/Code/Cached
 # environment
 LOGNAME = cmorales
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /Users/cmorales/.oh-my-zsh
 # environment
@@ -83,7 +83,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 9)
-SRCS = main_push_swap.c stack_init.c checker_errors.c operations/swap.c operations/push.c operations/rotate.c operations/reverse_rotate.c order_list.c
+SRCS = main_push_swap.c stack_init.c checker_errors.c operations/swap.c operations/push.c operations/rotate.c operations/reverse_rotate.c order_list.c utils.c
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 3)
@@ -121,7 +121,7 @@ MFLAGS = -Rrqp
 # environment
 MAIL = cmorales@student.42malaga.com
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2200
+XPC_SERVICE_NAME = com.microsoft.VSCode.2484
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -149,7 +149,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 28505
+VSCODE_PID = 20804
 # variable set hash-table stats:
 # Load=69/1024=7%, Rehash=0, Collisions=3/102=3%
 
@@ -159,15 +159,15 @@ VSCODE_PID = 28505
 
 # Directories
 
-# . (device 436207619, inode 39976969): 13 files, no impossibilities.
-# ./src (device 436207619, inode 40051623): No files, no impossibilities so far.
+# . (device 436207654, inode 39976969): 13 files, no impossibilities.
+# ./src (device 436207654, inode 40051623): No files, no impossibilities so far.
 
 # 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 obj/%.o: ./src/%.c
-#  commands to execute (from `Makefile', line 29):
+#  commands to execute (from `Makefile', line 30):
 	$(CC) $(CFLAGS) -I ./includes/ -I ./42-library/ -o $@ -c $<
 	
 
@@ -211,7 +211,7 @@ obj/operations/reverse_rotate.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-25 19:03:02
+#  Last modified 2022-07-26 17:28:43
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -221,7 +221,7 @@ prueba:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 48):
+#  commands to execute (from `Makefile', line 49):
 	./push_swap 8 6 7 65 5 4 
 	
 
@@ -242,7 +242,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 42):
+#  commands to execute (from `Makefile', line 43):
 	make fclean -C ./42-library
 	rm -rf obj $(NAME)
 	
@@ -271,7 +271,7 @@ lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/10=10%
-#  commands to execute (from `Makefile', line 32):
+#  commands to execute (from `Makefile', line 33):
 	make -C	./42-library
 	
 
@@ -279,7 +279,7 @@ obj:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 25):
+#  commands to execute (from `Makefile', line 26):
 	@mkdir -p $(OBJ_DIR)
 	@mkdir -p $(OBJ_DIR)/operations
 	
@@ -307,17 +307,23 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 38):
+#  commands to execute (from `Makefile', line 39):
 	make clean -C ./42-library
 	rm -rf obj $(OBJS)
 	
 
-push_swap: obj/main_push_swap.o obj/stack_init.o obj/checker_errors.o obj/operations/swap.o obj/operations/push.o obj/operations/rotate.o obj/operations/reverse_rotate.o obj/order_list.o
- 
+# Not a target:
+obj/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 35):
+
+ 
+push_swap: obj/main_push_swap.o obj/stack_init.o obj/checker_errors.o obj/operations/swap.o obj/operations/push.o obj/operations/rotate.o obj/operations/reverse_rotate.o obj/order_list.o obj/utils.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 36):
 	$(CC) $(CFLAGS) $(OBJS) -L ./42-library -l ft -o $(NAME)
 	
 
@@ -340,7 +346,7 @@ obj/main_push_swap.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=0/52=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/54=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -352,6 +358,6 @@ obj/main_push_swap.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jul 25 19:04:24 2022
+# Finished Make data base on Tue Jul 26 19:09:05 2022
 
  

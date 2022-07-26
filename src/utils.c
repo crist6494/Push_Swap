@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 18:38:12 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/26 19:28:11 by cmorales         ###   ########.fr       */
+/*   Created: 2022/07/26 17:19:04 by cmorales          #+#    #+#             */
+/*   Updated: 2022/07/26 20:34:04 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	rra(t_node **a)
+int	run_list_minus_1(t_node **list)
 {
-	t_node	*tmp;
-	t_node	*val;
-
-	tmp = (*a);
-	while (tmp->nxt->nxt != NULL)
-		tmp = tmp->nxt;
-	val = tmp->nxt;
-	val->nxt = (*a);
-	(*a) = val;
-	tmp->nxt = NULL;
-	ft_printf("RRA");
+	while ((*list)->fixed)
+	{
+		if ((*list)->fixed == -1)
+			return (0);
+		list = (*list)->nxt;
+	}
 }
-
-void	rrb(t_node **b)
+int	get_min_value(t_node *tmp)
 {
-	t_node	*tmp;
-	t_node	*val;
-
-	tmp = (*b);
-	while (tmp->nxt->nxt != NULL)
+	int	min;
+	
+	min = tmp->value;
+	while (tmp)
+	{
+		if (tmp->value < min)
+			min = tmp->value;
 		tmp = tmp->nxt;
-	val = tmp->nxt;
-	val->nxt = (*b);
-	(*b) = val;
-	tmp->nxt = NULL;
-	ft_printf("RRB\n");
-}
-
-void	rrr(t_node **a, t_node **b)
-{
-	rra(a);
-	rrb(b);
-	ft_printf("RRR\n");
+	}
+	return (min);
 }

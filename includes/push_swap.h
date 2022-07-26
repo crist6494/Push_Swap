@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/25 20:20:14 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:24:24 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 # include "../42-library/libft.h"
 # include <stddef.h>
+# define MAX_INT 2147483647
 
 typedef struct t_node
 {
 	int				value;
+	int				fixed;
 	struct t_node	*prv;
 	struct t_node	*nxt;
 }t_node;
@@ -43,5 +45,6 @@ void	rr(t_node **a, t_node **b);
 void	rra(t_node **a);
 void	order_2(t_node **a);
 void	order_3(t_node **list_a);
-void	order_4(t_node **list_a, t_node**list_b);
+void	order_sort_4(t_node **list_a, t_node**list_b);
+int		get_min_value(t_node *tmp);
 #endif
