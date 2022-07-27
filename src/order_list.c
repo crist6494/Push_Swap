@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:04:38 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/26 20:21:30 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/27 20:03:07 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,19 @@ void	order_3(t_node **list_a)
 
 void	order_sort_4(t_node **list_a, t_node **list_b)
 {
-	/* t_node	*tmp;
-	//t_node	*li;
-	int	val; */
-	
-/* 	tmp = (*list_a);
-	val = get_min_value(tmp);
-	while (*(list_a))
-	{
-		if ((*list_a)->value == )
-	} */
-	(void)list_a;
 	(void)list_b;
+	t_node	*tmp;
+	int	a;
+	t_node	*list;
+
+	list = NULL;
+	tmp = (*list_a);
+	get_min_value(&tmp);
+	while (tmp)
+	{
+		if (tmp->fixed == 0)
+			a = tmp->value;
+		tmp = tmp->nxt;
+	}
+	printf("%d\n", a);
 }

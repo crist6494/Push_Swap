@@ -6,7 +6,7 @@
 /*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/26 20:26:08 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/27 19:22:27 by cmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	printlist(t_node *list_a, t_node *list_b)
 		}
 		else
 			b = 0;
-		printf(" %d     %d \n", a, b);
+		printf("%d     %d \n", a, b);
 	}
-	printf("---------\n A	B \n\n");
+	printf("---------\nA     B \n\n");
 }
 
 int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
@@ -52,15 +52,17 @@ int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
 		init_stack(list_a, ft_atoi(num[i]));
 		i++;
 	}
-	/* pb(list_a,list_b);
-	pb(list_a,list_b);
-	pb(list_a,list_b);
-	rr(list_a, list_b); 
-	rra(list_a); */
-	
-	//order_sort_4(list_a, list_b);
-	order_3(list_a);
-	printlist(*list_a, *list_b);
+	/*get_min_value(list_a);
+	t_node *tmp;
+	tmp = (*list_a);
+	while (tmp)
+	{
+		ft_printf("%d\n", tmp->fixed);
+		tmp = tmp->nxt;
+	} */
+	order_sort_4(list_a, list_b);
+	ft_printf("\n");
+	printlist(*list_a, *list_b);	
 
 	return (0);
 }
