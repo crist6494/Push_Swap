@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
+/*   By: cristian <cristian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:22:37 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/27 18:23:54 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:26:01 by cristian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ void	order_3(t_node **list_a);
 void	order_sort_4(t_node **list_a, t_node**list_b);
 void	get_min_value(t_node **list);
 int		run_list_minus_1(t_node **list);
+void	order_sort_5(t_node **list_a, t_node **list_b);
 #endif

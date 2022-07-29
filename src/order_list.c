@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   order_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
+/*   By: cristian <cristian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:04:38 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/27 20:03:07 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:25:46 by cristian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,60 @@ void	order_3(t_node **list_a)
 
 void	order_sort_4(t_node **list_a, t_node **list_b)
 {
-	(void)list_b;
 	t_node	*tmp;
-	int	a;
-	t_node	*list;
-
-	list = NULL;
+	
 	tmp = (*list_a);
 	get_min_value(&tmp);
-	while (tmp)
+	pb(list_a,list_b);
+	order_3(list_a);
+	pa(list_a,list_b);
+		
+	if(tmp->fixed == 1)
+		sa(list_a);
+	else if (tmp->fixed == 3)
+		ra(list_a);
+	else if (tmp->fixed == 2)
 	{
-		if (tmp->fixed == 0)
-			a = tmp->value;
-		tmp = tmp->nxt;
+		rra(list_a);
+		pb(list_a,list_b);
+		ra(list_a);
+		pa(list_a, list_b);
+		ra(list_a);
 	}
-	printf("%d\n", a);
+}
+
+void	order_sort_5(t_node **list_a, t_node **list_b)
+{
+	t_node	*tmp;
+	
+	tmp = (*list_a);
+	get_min_value(&tmp);
+	pb(list_a,list_b);
+	order_sort_4(list_a, list_b);
+	pa(list_a,list_b);
+		
+	if(tmp->fixed == 1)
+		sa(list_a);
+	else if (tmp->fixed == 4)
+		ra(list_a);
+	else if (tmp->fixed == 3)
+	{
+		rra(list_a);
+		pb(list_a,list_b);
+		ra(list_a);
+		pa(list_a, list_b);
+		ra(list_a);
+	}
+	else if (tmp->fixed == 2)
+	{
+		rra(list_a);
+		rra(list_a);
+		pb(list_a,list_b);
+		pb(list_a,list_b);
+		ra(list_a);
+		pa(list_a, list_b);
+		pa(list_a, list_b);
+		ra(list_a);
+		ra(list_a);
+	}
 }

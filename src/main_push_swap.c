@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_push_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
+/*   By: cristian <cristian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:33:42 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/27 19:22:27 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:03:07 by cristian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	push_swap(int total_arg, char **num, t_node **list_a, t_node **list_b)
 		ft_printf("%d\n", tmp->fixed);
 		tmp = tmp->nxt;
 	} */
-	order_sort_4(list_a, list_b);
+	order_sort_5(list_a,list_b);
 	ft_printf("\n");
 	printlist(*list_a, *list_b);	
 

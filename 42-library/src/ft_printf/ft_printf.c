@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmorales <moralesrojascr@gmail.com>        +#+  +:+       +#+        */
+/*   By: cristian <cristian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 11:32:01 by cmorales          #+#    #+#             */
-/*   Updated: 2022/07/06 21:01:23 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/28 16:48:25 by cristian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,34 +65,3 @@ int	ft_printf(char const *str, ...)
 	va_end (alist);
 	return (tc);
 }
-/* 
-   int   main()
-{
-	void *a;
-
-	a = (void *)42;
-	
-    ft_printf("Muestra un caracter = %c\n \
-Muestra un string = %s\n \
-Muestra un porcentaje = %%\n \
-Muestra número decimal = %d\n \
-Muestra un entero de base 10 = %i\n \
-Muestra un número decimal sin signo = %u\n \
-Muestra un número hexadecimal en minuscula = %x\n \
-Muestra un número hexadecimal en mayúscula = %X\n \
-Muestra un puntero *void imprimido en hezadecimal = %p\n" \
-
-,'c', "El mamporrero",  -16, 9, -45, 42, 42, a); \
-    
-    printf("Muestra un caracter = %c\n \
-Muestra un string = %s\n \
-Muestra un porcentaje = %%\n \
-Muestra número decimal = %d\n \
-Muestra un entero de base 10 = %i\n \
-Muestra un número decimal sin signo = %u\n \
-Muestra un número hexadecimal en minuscula = %x\n \
-Muestra un número hexadecimal en mayúscula = %X\n \
-Muestra un puntero *void imprimido en hezadecimal = %p\n" \
-
-,'c', "El mamporrero",  -16, 9, -45, 42, 42, a); \
-}    */

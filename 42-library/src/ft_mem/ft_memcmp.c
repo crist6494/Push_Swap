@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmorales <cmorales@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: cristian <cristian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:55:39 by cmorales          #+#    #+#             */
-/*   Updated: 2022/04/26 12:48:52 by cmorales         ###   ########.fr       */
+/*   Updated: 2022/07/28 16:47:34 by cristian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (st1[pos] != st2[pos])
 			return (st1[pos] - st2[pos]);
-			pos++;
+		pos++;
 	}
 	return (0);
 }
